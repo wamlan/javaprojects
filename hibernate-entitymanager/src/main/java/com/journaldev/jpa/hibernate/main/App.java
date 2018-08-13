@@ -8,6 +8,7 @@ import javax.persistence.Persistence;
 
 import com.journaldev.jpa.hibernate.model.Employee;
 
+/*entity manager*/
 public class App {
 	public static void main(String[] args) {
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
