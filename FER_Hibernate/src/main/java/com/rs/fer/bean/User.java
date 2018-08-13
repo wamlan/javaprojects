@@ -13,8 +13,8 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	@Column(name = "firstName")
-	private String firstName;
+	/*@Column(name = "firstName")
+	private String firstName;*/
 	@Column(name = "middleName")
 	private String middleName;
 	@Column(name = "lastName")
@@ -24,9 +24,6 @@ public class User {
 
 	@Column(name = "userName")
 	private String userName;
-	
-	@Column(name = "userWork")
-	private String userWork;
 
 	@Column(name = "passWord")
 	private String passWord;
@@ -42,13 +39,13 @@ public class User {
 		this.id = id;
 	}
 
-	public String getFirstName() {
+	/*public String getFirstName() {
 		return firstName;
 	}
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
-	}
+	}*/
 
 	public String getMiddleName() {
 		return middleName;
