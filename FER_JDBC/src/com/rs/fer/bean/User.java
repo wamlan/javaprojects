@@ -1,43 +1,20 @@
 package com.rs.fer.bean;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="user")
 public class User {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", firstName=" + firstName + ", middleName=" + middleName + ", lastName=" + lastName
+				+ ", emailId=" + emailId + ", userName=" + userName + ", mobileNo=" + mobileNo + "]";
+	}
+
 	private int id;
-	@Column(name="firstName")
 	private String firstName;
-	@Column(name="middleName")
 	private String middleName;
-	@Column(name="lastName")
 	private String lastName;
-	@Column(name = "emailId")
 	private String emailId;
-
-	@Column(name = "userName")
 	private String userName;
-
-	@Column(name = "passWord")
 	private String passWord;
-
-	@Column(name = "mobileNumber")
-	private String mobileNumber;
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
+	private String mobileNo;
 
 	public String getFirstName() {
 		return firstName;
@@ -87,15 +64,20 @@ public class User {
 		this.passWord = passWord;
 	}
 
-	public String getMobileNumber() {
-		return mobileNumber;
+	public String getMobileNo() {
+		return mobileNo;
 	}
 
-	public void setMobileNumber(String mobileNumber) {
-		this.mobileNumber = mobileNumber;
+	public void setMobileNo(String mobileNo) {
+		this.mobileNo = mobileNo;
 	}
-	
-	
-	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 }
