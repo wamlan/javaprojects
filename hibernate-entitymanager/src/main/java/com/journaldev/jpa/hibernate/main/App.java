@@ -8,7 +8,6 @@ import javax.persistence.Persistence;
 
 import com.journaldev.jpa.hibernate.model.Employee;
 
-/*entity manager*/
 public class App {
 	public static void main(String[] args) {
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
@@ -19,6 +18,7 @@ public class App {
 		Employee employee = new Employee();
 		employee.setName("Amlan");
 		System.out.println("Saving Employee to Database");
+		System.out.println("saving......");
 
 		entityManager.persist(employee);
 		entityManager.getTransaction().commit();
